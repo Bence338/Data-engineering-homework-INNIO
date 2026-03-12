@@ -1,0 +1,414 @@
+{
+  "datasets": [
+    {
+      "name": "8ac9b66e",
+      "displayName": "gold_table_business_tests",
+      "queryLines": [
+        "SELECT * FROM workspace.default.gold_table_business_tests"
+      ]
+    },
+    {
+      "name": "df626760",
+      "displayName": "silver_table_clean_data",
+      "queryLines": [
+        "SELECT * FROM workspace.default.silver_table_clean_data"
+      ]
+    },
+    {
+      "name": "97ca9845",
+      "displayName": "bronze_table_raw_data",
+      "queryLines": [
+        "SELECT * FROM workspace.default.bronze_table_raw_data"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "8f44ff1a",
+      "displayName": "Untitled page",
+      "layout": [
+        {
+          "widget": {
+            "name": "distribution-of-operating-hours",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "8ac9b66e",
+                  "fields": [
+                    {
+                      "name": "operating_hours",
+                      "expression": "`operating_hours`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Distribution of operating hours"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "operating_hours",
+                  "displayName": "Operation time",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "displayName": "Number of operating hours",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "average-break-mean-effective-pressure-operating-hours",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "8ac9b66e",
+                  "fields": [
+                    {
+                      "name": "operating_hours",
+                      "expression": "`operating_hours`"
+                    },
+                    {
+                      "name": "avg(break_mean_effective_pressure)",
+                      "expression": "AVG(`break_mean_effective_pressure`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Average break mean effective pressure for the operating hours"
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "operating_hours",
+                  "displayName": "Operation time",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(break_mean_effective_pressure)",
+                  "displayName": "Average pressure",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "connection-between-load-issues",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "8ac9b66e",
+                  "fields": [
+                    {
+                      "name": "full_load_issues",
+                      "expression": "`full_load_issues`"
+                    },
+                    {
+                      "name": "avg(number_tc)",
+                      "expression": "AVG(`number_tc`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Connection between load issues and turbo chargers",
+                "showDescription": true,
+                "description": "Engines with more turbo charges have decreased chance of having any issue."
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "full_load_issues",
+                  "displayName": "issue appeared",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(number_tc)",
+                  "displayName": "Average turbo charges number",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 6,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "distribution-issue-types-1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "8ac9b66e",
+                  "fields": [
+                    {
+                      "name": "count(issue_type)",
+                      "expression": "COUNT(`issue_type`)"
+                    },
+                    {
+                      "name": "issue_type",
+                      "expression": "`issue_type`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Distribution of issue types"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "count(issue_type)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "percentages"
+                },
+                "color": {
+                  "fieldName": "issue_type",
+                  "displayName": "Types",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "chance-breakdown-issue",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "8ac9b66e",
+                  "fields": [
+                    {
+                      "name": "issue_type",
+                      "expression": "`issue_type`"
+                    },
+                    {
+                      "name": "avg(high_breakdown_risk)",
+                      "expression": "AVG(`high_breakdown_risk`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": "Chance for a breakdown due to the issue"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "issue_type",
+                  "displayName": "Issue",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(high_breakdown_risk)",
+                  "displayName": "Average chance for breakdown",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "issue_type",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 12,
+            "width": 8,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
