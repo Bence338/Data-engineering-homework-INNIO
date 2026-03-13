@@ -9,4 +9,7 @@ After making the business filtering as well, the notebook will create the final 
 
 Visualization
 
+I ended up with 5 charts. These charts contain information about the data and connections between the data. 
+I tried to use different charts and colors so the visualization can be talkative.
+
 
